@@ -1,0 +1,14 @@
+node_modules
+package-lock.json
+.vscode
+.DS_Store
+.vscode
+lib
+dist
+build
+_site
+package
+tmp*
+coverage
+test-report.html
+*.zip
