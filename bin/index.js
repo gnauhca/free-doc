@@ -7,9 +7,9 @@ const doc = require('../index');
 
 
 function getDocConfig() {
-  const defaultDocConfigPath = utils.resolveCwd('./dogdoc.config.js');
+  const defaultDocConfigPath = utils.resolveCwd('./gdoc.config.js');
   let docConfigPath;
-  let docConfig;
+  console.log(defaultDocConfigPath);
 
   if (program.config) {
     docConfigPath = utils.resolveCwd(program.config);
@@ -18,7 +18,8 @@ function getDocConfig() {
   }
   
   if (!fse.pathExistsSync(docConfigPath)) {
-    console.error('dogdoc.config.js is require');
+    console.error('gdoc.config.js is require');
+    process.exit(1);
     return;
   }
   return docConfigPath;
@@ -26,7 +27,7 @@ function getDocConfig() {
 
 program.version(pkg.version);
 
-program.option('-c, --config <type>', 'dogdoc configure file', )
+program.option('-c, --config <type>', 'doc configure file', )
 
 
 program

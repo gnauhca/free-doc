@@ -1,0 +1,71 @@
+.spfx-wrapper {
+  // padding-top: 80px;
+  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+
+  // .spfx-header,
+  // .spfx-footer {
+  //   flex: none;
+  // }
+}
+
+.spfx-body {
+  // flex: 1;
+  min-height: calc(~"100vh - @{headerHeight} - @{footerHeight}");
+}
+
+.spfx-container, .spfx-container--fullpage {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  min-width: 1000px;
+}
+
+@media screen and (min-width: 1600px) {
+
+  // html { font-size: ceil(1380 / 138 * 2) * 1px; /*no*/ }
+  .spfx-container, .spfx-container--fullpage {
+    width: 1420px;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+
+  // html { font-size: ceil(1300 / 138 * 2) * 1px; /*no*/ }
+  .spfx-container, .spfx-container--fullpage {
+    width: 1280px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+
+  // html { font-size: ceil(1200 / 138 * 2) * 1px; /*no*/ }
+  .spfx-container, .spfx-container--fullpage {
+    width: 1180px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+
+  // html { font-size: ceil(1200 / 138 * 2) * 1px; /*no*/ }
+  .spfx-container, .spfx-container--fullpage {
+    width: 100%;
+  }
+}
+
+// 全屏
+.spfx-container--fullpage {
+  position: relative;
+  max-width: 1600px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: calc(~"100vh");
+}
+
+// 全屏侧边 fix 栏
+// &-fixside {
+//   position: fixed;
+//   min-height: calc(~"100vh - @{headerHeight} - @{footerHeight} - @{layoutMargin} - @{layoutMargin}");
+//   max-height: calc(~"100vh - @{headerHeight} - @{layoutMargin} - @{layoutMargin}");
+// }

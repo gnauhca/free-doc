@@ -1,1 +1,0 @@
-module.exports=[{"title":"其他","children":[{"title":"Tag 标签","name":"tag","path":"/components/tag","component": () => import("@/src/tag/tag.md")}]}]

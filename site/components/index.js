@@ -1,0 +1,9 @@
+export { default as Avatar } from './avatar';
+export { default as Demo } from './demo';
+export { default as DocTable } from './doc-table';
+export { default as DocTables } from './doc-tables';
+export { default as FixedSide } from './fixed-side';
+export { default as Footer } from './footer';
+export { default as Header } from './header';
+export { default as Layout } from './layout';
+export { default as SideNav } from './sidenav';

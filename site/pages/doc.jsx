@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Route, Link, withRouter } from 'react-router-dom';
-import { connectGlobal } from '@/site/common/global';
-import dynamic from '@/site/common/dynamic';
-import { Layout, SideNav, FixedSide } from '@/site/components';
+import dynamic from '~/site/common/dynamic';
+import { SideNav, FixedSide } from '~/site/components';
 
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx.js';
@@ -78,7 +77,7 @@ class Doc extends React.Component {
     return this.docRoutes.map((nav, i) => (
       <Route
         key={i}
-        path={nav.path}
+        path={nav.fullPath}
         component={dynamic(nav.component, {
           ref: 'refContainer',
           onLoaded: component => {
@@ -95,14 +94,14 @@ class Doc extends React.Component {
   }
 
   renderComponentLink = nav => {
-    const active = this.props.location.pathname.replace(/\/$/, '') === nav.path;
+    const active = this.props.location.pathname.replace(/\/$/, '') === nav.fullPath;
 
     return (
       <Link
         className={classNames('spfx-main-link spfx-doc-link', {
           'spfx-doc-link--active': active
         })}
-        to={nav.path}
+        to={nav.fullPath}
       >
         {nav.title}
       </Link>
@@ -110,38 +109,31 @@ class Doc extends React.Component {
   };
 
   render() {
-    const { navData, docBar, layoutProps = {} } = this.props;
+    const { navData } = this.props;
     const { docContentTop, docContentBottom } = this.state;
-
+    console.log(navData);
     return (
-      <Layout className="spfx-page-doc" { ...layoutProps }>
-        <div className="spfx-container spfx-container--fullpage spfx-doc-container">
-          {docBar}
-          <div className="spfx-doc" ref={this.refDocContent}>
-            {docContentTop > 0 && (
-              <FixedSide
-                ref={this.refFixedSide}
-                top={docContentTop}
-                bottom={docContentBottom}
-              >
-                <SideNav
-                  data={navData}
-                  renderItem={this.renderComponentLink}
-                  onNavClick={this.onNavClick}
-                />
-              </FixedSide>
-            )}
+      <div className="spfx-container spfx-container--fullpage spfx-doc-container">
+        <div className="spfx-doc" ref={this.refDocContent}>
+          {docContentTop > 0 && (
+            <FixedSide
+              ref={this.refFixedSide}
+              top={docContentTop}
+              bottom={docContentBottom}
+            >
+              <SideNav
+                data={navData}
+                renderItem={this.renderComponentLink}
+                onNavClick={this.onNavClick}
+              />
+            </FixedSide>
+          )}
 
-            <div className="spfx-doc-content">{this.routeArr}</div>
-          </div>
+          <div className="spfx-doc-content">{this.routeArr}</div>
         </div>
-      </Layout>
+      </div>
     );
   }
 }
 
-export default withRouter(
-  connectGlobal(state => ({
-    layout: state.layout
-  }))(Doc)
-);
+export default withRouter(Doc);

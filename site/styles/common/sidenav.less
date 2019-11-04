@@ -1,0 +1,58 @@
+.spfx-sidenav {
+  .scroll-container();
+  width: 255px;
+  height: 100%;
+  padding: 10px 0;
+  border-right: 1px solid #f0f0f0;
+
+  // /* 设置滚动条的样式 */
+  // &::-webkit-scrollbar {
+  //   width: 6px;
+  // }
+
+  // /* 滚动槽 */
+  // &::-webkit-scrollbar-track {
+  //   border-radius: 3px;
+  // }
+
+  // /* 滚动条滑块 */
+  // &::-webkit-scrollbar-thumb {
+  //   border-radius: 3px;
+  //   background: rgba(0, 0, 0, 0.01);
+  //   display: none;
+  // }
+
+  // &:hover::-webkit-scrollbar-thumb {
+  //   display: block;
+  // }
+
+
+  .spfx-sidenav-group {
+    padding-top: 40px;
+
+    &__title {
+      display: block;
+      color: #999;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .spfx-sidenav-item+.spfx-sidenav-item {
+    margin-top: 8px;
+  }
+
+  .spfx-sidenav-item {
+    position: relative;
+  }
+
+  .spfx-sidenav-group--deep0 {
+    .spfx-sidenav-group__title {
+      padding-left: 20px;
+    }
+
+    .spfx-sidenav-item .spfx-main-link {
+      padding-left: 40px;
+    }
+  }
+}

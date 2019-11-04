@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const WebpackBar = require('webpackbar');
 const utils = require('../utils');
 const getCssLoaders = require('./css-loader');
 const cssLoaders = getCssLoaders();
@@ -17,7 +18,11 @@ module.exports = function getWebpackConfig(docConfig) {
       template: utils.resolveRoot('site/index.html'),
       filename: 'index.html'
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new WebpackBar({
+      name: 'g-doc',
+      color: '#666666'
+    })
   ];
 
   if (process.env.NODE_ENV === 'production') {
@@ -33,7 +38,7 @@ module.exports = function getWebpackConfig(docConfig) {
       'index': utils.resolveRoot('site/index.js')
     },
     output: {
-      path: utils.resolveRoot('dist'),
+      path: docConfig.dist || utils.resolveCwd('dist'),
       filename: '[name].js',
     },
     module: {
@@ -71,9 +76,12 @@ module.exports = function getWebpackConfig(docConfig) {
       modules: ['node_modules', path.join(__dirname, 'node_modules')],
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.json', '.less'],
       alias: {
+        '~': utils.resolveRoot('./'),
+        '~docs': utils.resolveRoot('./site/page/components.jsx'),
+        '~doc-config': utils.resolveRoot('./site/doc-config.js'),
+        '~setup': docConfig.setup || utils.resolveRoot('./site/setup.js'),
         '@': process.cwd(),
-        '@dogdoc': utils.resolveRoot('./site/page/components.jsx'),
-        '@components': utils.resolveRoot('./site/components-config.js')
+        
       }
     },
     resolveLoader: {

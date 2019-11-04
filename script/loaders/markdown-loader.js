@@ -129,6 +129,6 @@ export default React.forwardRef((props, ref) => (
 ))
 `;
 
-  console.log(reactSource); 
+  // console.log(reactSource); 
   return reactSource;
 };

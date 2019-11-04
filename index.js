@@ -1,31 +1,20 @@
+const path = require('path');
 const fs = require('fs');
+const lodash = require('lodash');
 const express = require('express');
 const webpack = require('webpack');
 const middleware = require('webpack-dev-middleware');
 const utils = require('./utils');
+const initial = require('./initial');
 const getWebpackConfig = require('./script/get-webpack-config');
 let docConfig;
 
 function init(docConfigPath) {
   docConfig = require(docConfigPath)();
-  generateComponentsNavConfigFile(docConfig.components);
-}
-
-function generateComponentsNavConfigFile(components = []) {
-  const filePath = utils.resolveRoot('./site/components-config.js');
-  let componentsStr = JSON.stringify(components);
-
-  componentsStr = componentsStr.replace(/"component":\s*"(.+?)"/g, (str, path) => {
-    return `"component": () => import("${path}")`
-  });
-
-  componentsStr = 'module.exports=' + componentsStr;
-
-  fs.writeFileSync(filePath, componentsStr, { encoding: 'utf-8' });
+  initial(docConfigPath);
 }
 
 function serve() {
-  utils.log('serve');
   const webpackConfig = getWebpackConfig(docConfig);
   const compiler = webpack(webpackConfig);
   const app = express();

@@ -1,10 +1,10 @@
 {
-  "name": "dogdoc",
+  "name": "g-doc",
   "version": "0.0.1",
-  "description": "dogdoc",
+  "description": "g-doc",
   "main": "index.js",
   "bin": {
-    "dogdoc": "./bin/index.js"
+    "g-doc": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -56,6 +56,7 @@
     "husky": "^3.0.9",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "lodash": "^4.17.15",
     "markdown-it": "^8.4.2",
     "markdown-it-container": "^2.0.0",
     "markdown-it-fence": "^0.1.3",
