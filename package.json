@@ -1,6 +1,6 @@
 {
   "name": "free-doc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "free-doc",
   "main": "index.js",
   "bin": {

@@ -81,7 +81,7 @@ module.exports = function getWebpackConfig(docConfig) {
       ].concat(cssLoaders)
     },
     resolve: {
-      modules: ['node_modules', path.join(__dirname, 'node_modules')],
+      modules: ['node_modules', path.join(__dirname, '../node_modules')],
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.json', '.less'],
       alias: {
         '~': utils.resolveRoot('./'),
@@ -93,7 +93,7 @@ module.exports = function getWebpackConfig(docConfig) {
       }
     },
     resolveLoader: {
-      modules: ['node_modules', path.join(__dirname, 'node_modules'), utils.resolveRoot('./script/loaders')],
+      modules: ['node_modules', path.join(__dirname, '../node_modules'), utils.resolveRoot('./script/loaders')],
       extensions: ['.js', '.json'],
       mainFields: ['loader', 'main']
     },
