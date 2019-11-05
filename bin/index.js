@@ -9,7 +9,7 @@ const doc = require('../index');
 function getDocConfig() {
   const defaultDocConfigPath = utils.resolveCwd('./doc.config.js');
   let docConfigPath;
-  console.log(defaultDocConfigPath);
+  // console.log(defaultDocConfigPath);
 
   if (program.config) {
     docConfigPath = utils.resolveCwd(program.config);

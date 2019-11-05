@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const babelOptions = require(utils.resolveRoot('babel.config.js'))();
+const root = path.join(__dirname, '../');
 
 module.exports = function getWebpackConfig(docConfig) {
   const plugins = [
@@ -47,7 +48,14 @@ module.exports = function getWebpackConfig(docConfig) {
           test: /\.jsx?$/,
           loader: 'babel-loader',
           options: babelOptions,
-          exclude: /node_modules/
+          exclude: (file) => {
+            if (/node_modules/.test(file)) {
+              if (file.indexOf(root) > -1 && file.indexOf('node_modules') === file.lastIndexOf('node_modules')) {
+                return false;
+              }
+              return true;
+            }
+          },
         },
         {
           test: /\.md$/,

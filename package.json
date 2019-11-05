@@ -1,6 +1,6 @@
 {
   "name": "free-doc",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "free-doc",
   "main": "index.js",
   "bin": {
@@ -13,9 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
-  },
-  "devDependencies": {
+    "react-dom": "^16.8.4",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
