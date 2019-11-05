@@ -5,13 +5,22 @@ const express = require('express');
 const webpack = require('webpack');
 const middleware = require('webpack-dev-middleware');
 const utils = require('./utils');
-const initial = require('./initial');
+const parseConfig = require('./parse-config');
 const getWebpackConfig = require('./script/get-webpack-config');
 let docConfig;
 
 function init(docConfigPath) {
-  docConfig = require(docConfigPath)();
-  initial(docConfigPath);
+  docConfig = parseConfig(docConfigPath);
+
+  // write config file
+  const filePath = utils.resolveRoot('./site/doc-config.js');
+
+  let docStr = JSON.stringify(docConfig);
+  docStr = 'module.exports=' + docStr;
+  docStr = docStr.replace(/"component":\s*"(.+?)"/g, (str, compStr) => {
+    return `"component": ${compStr}`
+  });
+  fs.writeFileSync(filePath, docStr, { encoding: 'utf-8' });
 }
 
 function serve() {
@@ -25,7 +34,7 @@ function serve() {
     })
   );
 
-  app.listen(16666, () => console.log('Example app listening on port 16666, visit http://127.0.0.1:16666!'));
+  app.listen(18888, () => console.log('Example app listening on port 18888, visit http://127.0.0.1:18888!'));
 }
 
 function build() {

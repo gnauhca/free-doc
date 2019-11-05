@@ -1,0 +1,120 @@
+@import "../vars.less";
+
+.ten-progress {
+
+  &__message {
+    color: @text-color-lighter-1;
+  }
+
+  &--type-bar {
+    width: 210px;
+    >div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 20px;
+    }
+    .ten-progress {
+      &__bar {
+        flex: 1;
+        background: #E9E9E9;
+        height: @progress-height-default;
+        border-radius: @progress-border-radius-default;
+      }
+
+      &__bar-inner {
+        background: @primary-color;
+        transition: width 0.3s;
+        height: 100%;
+        border-radius: inherit;
+      }
+
+      &__valuetext {
+        flex: none;
+        padding-left: 8px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  // circle
+  &--type-circle {
+    >div {
+      display: inline-block;
+      position: relative;
+    }
+
+    svg {
+      display: block;
+
+      path {
+        transition: all 0.3s;
+
+        &:first-child {
+          stroke: #E9E9E9;
+        }
+
+        &:last-child {
+          stroke: @primary-color;
+        }
+      }
+    }
+
+    .ten-progress {
+      &__valuetext {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        font-size: 20px;
+      }
+      &__message {
+        text-align: center;
+      }
+    }
+  }
+
+  &--size-default {
+    &.ten-progress {
+      &--type-circle {
+        svg {
+          width: 90px;
+        }
+      }
+    }
+  }
+
+  &--size-large {
+    &.ten-progress {
+      &--type-circle {
+        svg {
+          width: 146px;
+        }
+        .ten-progress {
+          &__valuetext {
+            font-size: 32px;
+          }
+        }
+      }
+
+      &--type-bar {
+        width: 300px;
+        .ten-progress {
+          &__bar {
+            height: @progress-height-large;
+            border-radius: @progress-border-radius-large;
+          }
+        }
+      }
+    }
+  }
+
+  &--inline {
+    display: inline-block;
+  }
+
+  &--block&--type-bar{
+    width: 100%;
+  }
+}

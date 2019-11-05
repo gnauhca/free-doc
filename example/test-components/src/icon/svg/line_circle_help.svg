@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>line_circle_help</title>
+    <desc>Created with Sketch.</desc>
+    <g id="line_circle_help" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="24" height="24"></rect>
+        <path d="M11.1,17.3666667 L12.7666667,17.3666667 L12.7666667,15.7 L11.1,15.7 L11.1,17.3666667 Z M11.9333333,6.7 C10.0916667,6.7 8.6,8.19166667 8.6,10.0333333 L10.2666667,10.0333333 C10.2666667,9.11666667 11.0166667,8.36666667 11.9333333,8.36666667 C12.85,8.36666667 13.6,9.11666667 13.6,10.0333333 C13.6,11.7 11.1,11.4916667 11.1,14.2 L12.7666667,14.2 C12.7666667,12.325 15.2666667,12.1166667 15.2666667,10.0333333 C15.2666667,8.19166667 13.775,6.7 11.9333333,6.7 Z" id="Help-Outline" fill="#000000"></path>
+        <circle id="Oval" stroke="#000000" stroke-width="2" fill-rule="nonzero" cx="12" cy="12" r="9"></circle>
+    </g>
+</svg>

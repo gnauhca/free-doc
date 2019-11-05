@@ -1,0 +1,291 @@
+@primary-color: #0052d9;
+
+@primary-color-darken-1: darken(@primary-color, (43 - 35) * 1%);
+@primary-color-darken-2: darken(@primary-color, (43 - 27) * 1%);
+@primary-color-darken-3: darken(@primary-color, (43 - 19) * 1%);
+@primary-color-darken-4: darken(@primary-color, (43 - 11) * 1%);
+
+@primary-color-ligher-1: lighten(@primary-color, (51 - 43) * 1%);
+@primary-color-ligher-2: lighten(@primary-color, (59 - 43) * 1%);
+@primary-color-ligher-3: lighten(@primary-color, (67 - 43) * 1%);
+@primary-color-ligher-4: lighten(@primary-color, (75 - 43) * 1%);
+@primary-color-ligher-5: lighten(@primary-color, (83 - 43) * 1%);
+@primary-color-ligher-6: lighten(@primary-color, (91 - 43) * 1%);
+@primary-color-ligher-7: lighten(@primary-color, (96 - 43) * 1%);
+// @primary-color-ligher-6: hsl(217, 100, 91);
+
+// 状态色
+@success-color: #3ecc36;
+@error-color: #ff3e00;
+@warning-color: #ffa700;
+@info-color: #c7ddf3;
+
+@disabled-color: #c0c0c0;
+
+// 文字色
+@text-color: #333; // 黑 80%
+@text-color-lighter-1: #666; // 黑 60%
+@text-color-lighter-2: #999; // 黑 40%
+@text-color-lighter-3: #ccc; // 黑 20%
+
+@placeholder-color: #999;
+
+@font-size-base: 14px;
+@line-height-base: 1.5;
+@font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+  Helvetica, tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC",
+  "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+/**
+ * 文字部分 
+ * size 大小，line 行高， color 颜色
+ */
+// 字体大小
+@font-size-small: 12px;
+@font-size: 14px;
+@font-size-large: 16px;
+@font-size-larger: 18px;
+// 行高
+@line-height-small: 30px;
+@line-height: 38px;
+@line-height-large: 48px;
+@line-height-larger: 60px;
+
+// 标题文字
+@title-level-1-size: 38px;
+@title-level-1-line: 53 / 38;
+@title-level-1-color: @text-color;
+@title-level-2-size: 20px;
+@title-level-2-line: 28 / 20;
+@title-level-2-color: @text-color;
+@title-level-3-size: 16px;
+@title-level-3-line: 22 / 16;
+@title-level-3-color: @text-color;
+@title-level-4-size: 16px;
+@title-level-4-line: 22 / 16;
+@title-level-4-color: @text-color-lighter-1;
+
+// 正常文字
+@text-level-1-size: 14px;
+@text-level-1-line: 20 / 14;
+@text-level-1-color: @text-color;
+@text-level-2-size: 14px;
+@text-level-2-line: 20 / 14;
+@text-level-2-color: @text-color-lighter-1;
+@text-level-3-size: 14px;
+@text-level-3-line: 20 / 14;
+@text-level-3-color: @text-color-lighter-2;
+
+// 小字
+@smalltext-level-1-size: 12px;
+@smalltext-level-1-line: 17 / 14;
+@smalltext-level-1-color: @text-color-lighter-1;
+@smalltext-level-2-size: 12px;
+@smalltext-level-2-line: 17 / 14;
+@smalltext-level-2-color: @text-color-lighter-2;
+
+@link-color: @primary-color;
+@link-hover-color: lighten(@primary-color, 20%);
+@link-active-color: darken(@primary-color, 20%);
+@link-decoration: none;
+@link-hover-decoration: none;
+
+// icon
+@icon-color: rgba(0, 0, 0, 0.32);
+
+// Shadow
+@shadow-level-1: 3px 3px 8px 2px rgba(0, 0, 0, 0.06);
+@shadow-level-2: 6px 6px 12px 6px rgba(0, 0, 0, 0.08);
+// @shadow-level-2: 0px 8px 25px -10px rgba(193,193,193, 1);
+
+
+// border
+@border-color: #d9d9d9;
+@border-main: 1px solid @border-color;
+@border-color-2: lighten(@border-color, 5.9124%);
+@border-main-2: 1px solid @border-color-2;
+
+// rate
+@background-color-disabled: #e9e9e9;
+@background-color-active: #ffa700;
+
+@border-radius-percent: 0;
+
+/* button */
+@button-border-width: 1px;
+
+@button-height-default: 40px;
+@button-line-height-default: @button-height-default - @button-border-width * 2;
+@button-height-large: 64px;
+@button-line-height-large: @button-height-large - @button-border-width * 2;
+@button-height-small: 32px;
+@button-line-height-small: @button-height-small - @button-border-width * 2;
+
+@button-padding-default: 0 24px;
+@button-padding-large: 0 32px;
+@button-padding-small: 0 18px;
+
+@button-min-width-default: 120px;
+@button-min-width-large: 160px;
+@button-min-width-small: 104px;
+
+@button-font-size-default: 14px;
+@button-font-size-large: 20px;
+@button-font-size-small: 14px;
+
+@button-icon-size-default: 20px;
+@button-icon-size-large: 28px;
+@button-icon-size-small: 16px;
+
+
+@button-border-radius-percent: @border-radius-percent;
+@button-border-radius-large: @button-height-large / 2 *
+  @button-border-radius-percent; // from 0px to 32px
+@button-border-radius-default: @button-height-default / 2 *
+  @button-border-radius-percent;
+@button-border-radius-small: @button-height-small / 2 *
+  @button-border-radius-percent;
+
+/* input */
+@input-border-width: 1px;
+
+@input-height-default: 40px;
+@input-height-small: 32px;
+
+@input-inner-height-default: @input-height-default - @input-border-width * 2;
+@input-inner-height-small: @input-height-small - @input-border-width * 2;
+
+@input-font-size-default: 14px;
+@input-line-height-default: 20px;
+
+@input-font-size-small: 14px;
+@input-line-height-small: 20px;
+
+@input-icon-size-default: 18px;
+@input-icon-to-edge-default: 11px;
+@input-icon-to-input-default: 3px;
+@input-icon-size-small: 18px;
+@input-icon-to-input-small: 3px;
+@input-icon-to-edge-small: 10px;
+
+
+@input-padding-hor-default: 8px;
+@input-padding-ver-default: (@input-inner-height-default - @input-line-height-default) / 2;
+@input-padding-default: @input-padding-ver-default @input-padding-hor-default;
+@input-padding-hor-small: 8px;
+@input-padding-ver-small: (@input-inner-height-small - @input-line-height-small) / 2;
+@input-padding-small: @input-padding-ver-small @input-padding-hor-small;
+
+@input-border-radius-percent: @border-radius-percent;
+@input-border-radius-default: @input-height-default / 2 *
+  @input-border-radius-percent;
+@input-border-radius-small: @input-height-small / 2 *
+  @input-border-radius-percent;
+
+/* transfer */
+@transfer-height-default: 238px;
+@transfer-height-min: 40px;
+@transfer-border-radius-percent: @border-radius-percent;
+@transfer-border-radius-default: @transfer-height-min / 2 *
+  @message-border-radius-percent;
+
+/* alert */
+@alert-padding: 8px;
+@alert-line-height: 20px;
+@alert-height-default: @alert-padding*2 + @alert-line-height;
+@alert-border-radius-percent: @border-radius-percent;
+@alert-border-radius-default: @alert-height-default / 2 *
+  @alert-border-radius-percent;
+
+/* menu */
+@menu-item-height-horizontal: 70px;
+
+@menu-padding-vertical: 0 16px;
+@menu-width-vertical: 256px;
+@menu-collapsed-width-vertical: 88px;
+@menu-collapsed-submenu-width-vertical: 256px;
+
+@menu-item-deep-0-height-vertical: 64px;
+@menu-item-content-height-vertical: 40px;
+@menu-item-content-padding-vertical: 0 16px;
+
+// 菜单项箭头离菜单项内容右边缘距离
+@menu-submenu-carret-right-vertical: 0px;
+@menu-submenu-carret-right-horizontal: 24px;
+
+@menu-item-deep-0-color-active-collapsed: @primary-color;
+@menu-item-deep-0-bg-active-collapsed: #fff;
+
+@menu-item-color-hover: @primary-color;
+@menu-item-bg-hover: #fff;
+
+@menu-item-color-active:  #fff;
+@menu-item-bg-active: @primary-color;
+
+/* message */
+@message-padding: 10px;
+@message-line-height: 20px;
+@message-height-default: @message-padding*2 + @message-line-height;
+@message-border-radius-percent: @border-radius-percent;
+@message-border-radius-default: @message-height-default / 2 *
+  @message-border-radius-percent;
+
+/* modal */
+@modal-height-default: 60px;
+@modal-border-radius-percent: @border-radius-percent;
+@modal-border-radius-default: @modal-height-default / 2 *
+  @message-border-radius-percent;
+
+/* badge */
+@badge-height-default: 16px;
+@badge-border-radius-percent: @border-radius-percent;
+@badge-border-radius-default: @badge-height-default / 2 *
+  @badge-border-radius-percent;
+
+/* tag */
+@tag-padding-vertical: 2px;
+@tag-padding-horizontal: 9px;
+@tag-line-height: 20px;
+@tag-height-default: @tag-padding-vertical * 2 + @tag-line-height;
+@tag-border-radius-percent: @border-radius-percent;
+@tag-border-radius-default: @tag-height-default / 2 * @tag-border-radius-percent;
+
+@tag-bg-color: #f6f6f6;
+
+/* progress */
+@progress-height-default: 4px;
+@progress-height-large: 8px;
+@progress-border-radius-percent: @border-radius-percent;
+@progress-border-radius-default: @progress-height-default / 2 *
+  @progress-border-radius-percent;
+@progress-border-radius-large: @progress-height-large / 2 *
+  @progress-border-radius-percent;
+
+/* popup */
+@popup-height-default: 60px;
+@popup-border-raduis-percent: @border-radius-percent;
+@popup-border-radius-default: @popup-height-default / 2 *
+  @popup-border-raduis-percent;
+
+/* tooltip */
+@tooltip-padding-default: 16px;
+@tooltip-height-default: @tooltip-padding-default * 2;
+@tooltip-border-radius-percent: @border-radius-percent;
+@tooltip-border-radius-default: @tooltip-height-default / 2 *
+  @tooltip-border-radius-percent;
+
+@tooltip-arrow-border: none;
+// @tooltip-arrow-border: @border-main;
+@tooltip-arrow-zindex: 1;
+
+/* loading */
+@loading-width-default: 8px;
+@loading-border-radius-percent: @border-radius-percent;
+@loading-border-radius-default: @loading-width-default / 2 *
+  @loading-border-radius-percent;
+
+/* tabs */
+@tabs-height-default: 72px;
+@tabs-border-radius-percent: @border-radius-percent;
+@tabs-border-radius-default: @tabs-height-default / 2 *
+  @tabs-border-radius-percent;

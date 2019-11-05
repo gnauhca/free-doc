@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progress base demo works fine 1`] = `
+<_default>
+  <div>
+    <Progress
+      inline={true}
+      size="default"
+      type="bar"
+      value={0.6}
+      valueText={[Function]}
+    >
+      <div
+        className="ten-progress ten-progress--size-default ten-progress--type-bar ten-progress--inline"
+      >
+        <div>
+          <div
+            className="ten-progress__bar"
+          >
+            <div
+              className="ten-progress__bar-inner"
+              style={
+                Object {
+                  "width": "60%",
+                }
+              }
+            />
+          </div>
+          <span
+            className="ten-progress__valuetext"
+          >
+            60%
+          </span>
+        </div>
+      </div>
+    </Progress>
+    <Progress
+      inline={true}
+      size="large"
+      type="bar"
+      value={0.7}
+      valueText={[Function]}
+    >
+      <div
+        className="ten-progress ten-progress--size-large ten-progress--type-bar ten-progress--inline"
+      >
+        <div>
+          <div
+            className="ten-progress__bar"
+          >
+            <div
+              className="ten-progress__bar-inner"
+              style={
+                Object {
+                  "width": "70%",
+                }
+              }
+            />
+          </div>
+          <span
+            className="ten-progress__valuetext"
+          >
+            70%
+          </span>
+        </div>
+      </div>
+    </Progress>
+  </div>
+</_default>
+`;
+
+exports[`Progress circle demo works fine 1`] = `
+<_default>
+  <div>
+    <Progress
+      inline={true}
+      size="default"
+      type="circle"
+      value={0.6}
+      valueText={[Function]}
+    >
+      <div
+        className="ten-progress ten-progress--size-default ten-progress--type-circle ten-progress--inline"
+      >
+        <div>
+          <svg
+            viewBox="0 0 146 146"
+          >
+            <path
+              className="ten-progress__path-bg"
+              d="
+    M 73 4 
+    A 69 69 0 0 1 73 142
+    A 69 69 0 0 1 73 4
+  "
+              fill="none"
+              strokeWidth={8}
+            />
+            <path
+              className="ten-progress__path-value"
+              d="
+    M 73 4 
+    A 69 69 0 0 1 73 142
+    A 69 69 0 0 1 73 4
+  "
+              fill="none"
+              strokeDasharray="433.54 433.54"
+              strokeDashoffset={173.41600000000003}
+              strokeWidth={8}
+            />
+          </svg>
+          <span
+            className="ten-progress__valuetext"
+          >
+            60%
+          </span>
+        </div>
+      </div>
+    </Progress>
+    <Progress
+      inline={true}
+      size="large"
+      type="circle"
+      value={1}
+      valueText={[Function]}
+    >
+      <div
+        className="ten-progress ten-progress--size-large ten-progress--type-circle ten-progress--inline"
+      >
+        <div>
+          <svg
+            viewBox="0 0 146 146"
+          >
+            <path
+              className="ten-progress__path-bg"
+              d="
+    M 73 4 
+    A 69 69 0 0 1 73 142
+    A 69 69 0 0 1 73 4
+  "
+              fill="none"
+              strokeWidth={8}
+            />
+            <path
+              className="ten-progress__path-value"
+              d="
+    M 73 4 
+    A 69 69 0 0 1 73 142
+    A 69 69 0 0 1 73 4
+  "
+              fill="none"
+              strokeDasharray="433.54 433.54"
+              strokeDashoffset={0}
+              strokeWidth={8}
+            />
+          </svg>
+          <span
+            className="ten-progress__valuetext"
+          >
+            100%
+          </span>
+        </div>
+      </div>
+    </Progress>
+  </div>
+</_default>
+`;

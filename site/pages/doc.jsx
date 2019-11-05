@@ -111,7 +111,6 @@ class Doc extends React.Component {
   render() {
     const { navData } = this.props;
     const { docContentTop, docContentBottom } = this.state;
-    console.log(navData);
     return (
       <div className="spfx-container spfx-container--fullpage spfx-doc-container">
         <div className="spfx-doc" ref={this.refDocContent}>

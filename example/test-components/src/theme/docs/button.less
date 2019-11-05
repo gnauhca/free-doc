@@ -1,0 +1,25 @@
+.demo-button-col {
+  display: inline-block;
+  width: 170px;
+  .ten-button + .ten-button {
+    margin-left: 0!important;
+    margin-top: 10px;
+  }
+}
+.demo-button-row {
+  & + .demo-button-row {
+    margin-top: 10px;
+  }
+}
+
+.demo-button-group-base {
+  >div {
+    margin-top: 10px;
+  }
+}
+
+.demo-button-icon {
+  .demo-button-col {
+    width: 130px;
+  }
+}

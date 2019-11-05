@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ICON/最新/lock_off</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ICON/最新/lock_off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lock_off">
+            <rect id="24x24" x="0" y="0" width="24" height="24"></rect>
+            <path d="M12,3 C14.4188915,3 16.4366008,4.71766536 16.8999437,6.99981203 L14.8293257,7.00008893 C14.4175144,5.8348501 13.3062521,5 12,5 C10.4023191,5 9.09633912,6.24891996 9.00509269,7.82372721 L9,8 L9,9 L20,9 C20.5522847,9 21,9.44771525 21,10 L21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,10 C3,9.44771525 3.44771525,9 4,9 L7,9 L7,8 C7,5.23857625 9.23857625,3 12,3 Z M19,11 L5,11 L5,19 L19,19 L19,11 Z M12,13 C13.1045695,13 14,13.8954305 14,15 C14,16.1045695 13.1045695,17 12,17 C10.8954305,17 10,16.1045695 10,15 C10,13.8954305 10.8954305,13 12,13 Z" id="lock_on" fill="#000000" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

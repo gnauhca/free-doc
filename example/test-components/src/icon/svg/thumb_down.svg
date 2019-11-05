@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ICON/最新/thumb_down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ICON/最新/thumb_down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="thumb_up" transform="translate(3.000000, 3.000000)" fill="#000000">
+            <path d="M7.5,0 L7.65975432,0.00538306486 C8.8739065,0.0874793464 9.83333333,1.09836327 9.83333333,2.33333333 L9.83333333,2.33333333 L9.83333333,6.75 L15.6666667,6.75 L18,9 L15.8608617,17.2509622 C15.7465162,17.6920089 15.3484931,18 14.8928648,18 L14.8928648,18 L4,18 L4,9 L7.5,0 Z M3,9 L3,18 L0,18 L0,9 L3,9 Z" id="thumb_down" transform="translate(9.000000, 9.000000) scale(1, -1) translate(-9.000000, -9.000000) "></path>
+        </g>
+    </g>
+</svg>

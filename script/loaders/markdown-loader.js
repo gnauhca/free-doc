@@ -118,7 +118,7 @@ module.exports = function (source) {
 
   const reactSource = `
 import React from 'react';
-import { Demo, DocTables } from '@/site/components';
+import { Demo, DocTables } from '~/site/components';
 ${demoDefsStr}
 ${docImportsStr}
 

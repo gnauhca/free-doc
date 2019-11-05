@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ICON/最新/cloud_download</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ICON/最新/cloud_download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cloud_download" transform="translate(2.000000, 5.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M9,0 C12.1724615,0 14.8520062,2.11042759 15.7112932,5.00394194 C18.0982334,5.11496165 20,7.08539013 20,9.5 C20,11.9852814 17.9852814,14 15.5,14 C15.3310924,14 15.1643582,13.990694 15.0002824,13.9725668 L15,14 L4,14 L4.00120262,13.964379 C3.83752483,13.9878541 3.67018083,14 3.5,14 C1.56700338,14 0,12.4329966 0,10.5 C0,9.10025745 0.821682556,7.89242915 2.00901299,7.33254978 C2.00262481,7.22315085 2,7.11188195 2,7 C2,3.13400675 5.13400675,0 9,0 Z M9,4 L9,8 L6,8 L10,11 L14,8 L11,8 L11,4 L9,4 Z"></path>
+        </g>
+    </g>
+</svg>

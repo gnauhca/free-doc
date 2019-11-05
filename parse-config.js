@@ -1,11 +1,8 @@
-const path = require('path');
-const fs = require('fs');
 const lodash = require('lodash');
 const utils = require('./utils');
 
 
 function parseComponents(components = [], relativePath = '') {
-  const docConfigDir = path.dirname(relativePath)
   let componentsConfig = lodash.cloneDeep(components);
 
   function parsePath(component, parentPath = '') {
@@ -19,10 +16,8 @@ function parseComponents(components = [], relativePath = '') {
     if (component.component) {
       let componentVal = component.component;
 
-      if (!/^[@\\/]/.test(componentVal)) {
-        // relative path
-        componentVal = path.resolve(docConfigDir, componentVal);
-      }
+      componentVal = utils.resolvePath(componentVal, relativePath);
+
       if (typeof component.async !== 'undefined' && !component.async) {
         componentVal = `require('${componentVal}')`
       } else {
@@ -42,20 +37,13 @@ function parseComponents(components = [], relativePath = '') {
 }
 
 module.exports = function init(docConfigPath) {
-  const filePath = utils.resolveRoot('./site/doc-config.js');
   const docConfig = require(docConfigPath)();
   let doc = lodash.cloneDeep(docConfig);
-  let docStr = '';
+
+  if (doc.setup) {
+    doc.setup = utils.resolvePath(doc.setup, docConfigPath);
+  }
 
   doc.components = parseComponents(doc.components, docConfigPath);
-
-  delete doc.customWebpackConfig;
-  delete doc.setup;
-  
-  docStr = JSON.stringify(doc);
-  docStr = docStr.replace(/"component":\s*"(.+?)"/g, (str, compStr) => {
-    return `"component": ${compStr}`
-  });
-  docStr = 'module.exports=' + docStr;
-  fs.writeFileSync(filePath, docStr, { encoding: 'utf-8' });
+  return doc;
 }

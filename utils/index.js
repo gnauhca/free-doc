@@ -12,6 +12,14 @@ module.exports = {
 
     console.log(colorMap[type]('ten: ' + message));
   },
+  resolvePath(p1, relative) {
+    if (/^[@\\/]/.test(p1) || !relative) {
+      return p1
+    }
+    const dir = path.dirname(relative);
+
+    return path.join(dir, p1);
+  },
   resolveCwd() {
     const args = [].slice.call(arguments, 0);
     args.unshift(process.cwd());

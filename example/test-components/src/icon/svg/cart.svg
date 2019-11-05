@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ICON/最新/cart</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ICON/最新/cart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cart">
+            <g id="编组" transform="translate(3.000000, 4.000000)" fill="#000000" fill-rule="nonzero">
+                <path d="M4.99498747,12.5 C3.89223058,12.5 3,13.4 3,14.5 C3,15.6 3.89223058,16.5 4.99498747,16.5 C6.09774436,16.5 7,15.6 7,14.5 C7,13.4 6.09774436,12.5 4.99498747,12.5 Z M14.9949875,12.5 C13.8922306,12.5 13,13.4 13,14.5 C13,15.6 13.8922306,16.5 14.9949875,16.5 C16.0977444,16.5 17,15.6 17,14.5 C17,13.4 16.0977444,12.5 14.9949875,12.5 Z" id="cart"></path>
+                <polygon id="路径" points="2.83323057 3 4.80477057 11 16.1643057 11 18 2.46871143 15.0695312 2.46871143 13.8236818 8 7.15520117 8 5.18366118 0 0 0 0 3"></polygon>
+            </g>
+            <rect id="24x24" x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

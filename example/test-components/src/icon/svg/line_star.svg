@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>star_off</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon-规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="star_off" fill="#000000" fill-rule="nonzero">
+            <g transform="translate(2.000000, 3.000000)" id="Star">
+                <path d="M10,14.25 L4.4160401,17.1856614 L5.48248155,10.9678307 L0.964963095,6.56433855 L7.20802005,5.65716928 L10,0 L12.7919799,5.65716928 L19.0350369,6.56433855 L14.5175185,10.9678307 L15.5839599,17.1856614 L10,14.25 Z M10,11.9904485 L12.9276978,13.5296304 L12.3685573,10.2695909 L14.7371146,7.96081816 L11.4638489,7.48518481 L10,4.51910292 L8.53615108,7.48518481 L5.26288538,7.96081816 L7.63144269,10.2695909 L7.07230216,13.5296304 L10,11.9904485 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

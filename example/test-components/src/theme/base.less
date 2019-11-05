@@ -1,0 +1,57 @@
+@import "./vars.less";
+@import "./mixins/index.less";
+@import "./normalize.less";
+
+body {
+  font-family: @font-family;
+  font-size: @font-size-base;
+  color: @text-color;
+  line-height: @line-height-base;
+  -webkit-font-smoothing: antialiased;
+}
+ul, dl, li, dd, dt {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// [class^='ten'] a, a[class^='ten']  {
+//   text-decoration: none;
+
+//   &:hover, &:active, &:focus {
+//     text-decoration: none;
+//   }
+// }
+
+// [class^='ten'], [class^='ten'] * {
+//   box-sizing: border-box;
+//   font-family: @font-family;
+// }a
+
+* {
+  box-sizing: border-box;
+  font-family: @font-family;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+}
+
+a.ten-primary-link {
+  .ten-primary-link();
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ICON/最新/refresh</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ICON/最新/refresh" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="refresh">
+            <rect id="24x24" x="0" y="0" width="24" height="24"></rect>
+            <path d="M16,12 L19,8 L22,12 L20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 C9.99048507,20.5 8.08485431,19.7985011 6.57046358,18.5401241 L6.57046358,18.5401241 L8.48776402,16.2327535 C9.46835721,17.0475736 10.6973794,17.5 12,17.5 C15.0375661,17.5 17.5,15.0375661 17.5,12 L17.5,12 L16,12 Z M12,3.5 C13.8978752,3.5 15.7030883,4.12571971 17.1735646,5.25532747 L17.4295364,5.45987589 L15.512236,7.76724647 C14.5316428,6.95242645 13.3026206,6.5 12,6.5 C9.03652085,6.5 6.62046086,8.84378001 6.5043672,11.7787929 L6.5,12 L8,12 L5,16 L2,12 L3.5,12 C3.5,7.30557963 7.30557963,3.5 12,3.5 Z" fill="#000000" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

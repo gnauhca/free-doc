@@ -6,7 +6,7 @@ class Footer extends React.Component {
       <footer className="spfx-footer">
         <div className="spfx-container">
           <div className="spfx-footer__left">
-            <p className="spfx-footer__copyright">generate by g-doc</p>
+            <p className="spfx-footer__copyright">generate by free-doc</p>
           </div>
         </div>
       </footer>

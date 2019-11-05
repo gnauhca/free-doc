@@ -7,7 +7,7 @@ const doc = require('../index');
 
 
 function getDocConfig() {
-  const defaultDocConfigPath = utils.resolveCwd('./gdoc.config.js');
+  const defaultDocConfigPath = utils.resolveCwd('./doc.config.js');
   let docConfigPath;
   console.log(defaultDocConfigPath);
 
@@ -18,7 +18,7 @@ function getDocConfig() {
   }
   
   if (!fse.pathExistsSync(docConfigPath)) {
-    console.error('gdoc.config.js is require');
+    console.error('doc.config.js is require');
     process.exit(1);
     return;
   }

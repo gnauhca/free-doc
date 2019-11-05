@@ -20,7 +20,7 @@ module.exports = function getWebpackConfig(docConfig) {
     }),
     new CleanWebpackPlugin(),
     new WebpackBar({
-      name: 'g-doc',
+      name: 'free-doc',
       color: '#666666'
     })
   ];
@@ -77,7 +77,7 @@ module.exports = function getWebpackConfig(docConfig) {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.json', '.less'],
       alias: {
         '~': utils.resolveRoot('./'),
-        '~docs': utils.resolveRoot('./site/page/components.jsx'),
+        '~docs': utils.resolveRoot('./site/page/docs.jsx'),
         '~doc-config': utils.resolveRoot('./site/doc-config.js'),
         '~setup': docConfig.setup || utils.resolveRoot('./site/setup.js'),
         '@': process.cwd(),

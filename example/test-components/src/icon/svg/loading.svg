@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ICON/最新/loading</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ICON/最新/loading" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="loading">
+            <path d="M19,2 L19,5 L18,5 L18,8 C18,9.39974775 16.7866227,10.6786216 14.1975644,12.0001952 C16.7863204,13.3210598 18,14.6000779 18,16 L18,19 L19,19 L19,22 L5,22 L5,19 L6,19 L6,16 C6,14.6004323 7.21306516,13.3217074 9.80143661,12.0003148 C7.30845992,10.727081 6.09111801,9.49380364 6.004933,8.15397614 L6,8 L6,5 L5,5 L5,2 L19,2 Z M12,14 C9.95012167,14.9280969 9,15.7803528 9,16.5 L9,19 L15,19 L15,16.5 C15,15.7803528 14.0498783,14.9280969 12,14 Z M15,5 L9,5 L9,7.5 C9,8.21964719 9.95012167,9.07190312 12,10 C13.9607532,9.11225516 14.9153018,8.29389977 14.9945995,7.59461439 L15,7.5 L15,5 Z" fill="#000000" fill-rule="nonzero"></path>
+            <rect id="24x24" x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

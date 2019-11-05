@@ -1,0 +1,26 @@
+@import "../vars.less";
+
+.ten-icon {
+  display: inline-block;
+  color: inherit;
+  font-size: inherit;
+  text-align: center;
+  svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+  }
+
+  &[class*='loading_gradient'] {
+    animation: icon-loading-rotate 1.5s linear infinite;
+  }
+}
+
+@keyframes icon-loading-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

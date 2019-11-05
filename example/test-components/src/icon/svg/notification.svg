@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ICON/最新/notification</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ICON/最新/notification" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="notification">
+            <path d="M12,22 C13.2375,22 14.25,21.0769231 14.25,19.9487179 L9.75,19.9487179 C9.75,21.0769231 10.75125,22 12,22 Z M18.75,15.8461538 L18.75,10.7179487 C18.75,7.56923077 16.905,4.93333333 13.6875,4.23589744 L13.6875,3.53846154 C13.6875,2.68717949 12.93375,2 12,2 C11.06625,2 10.3125,2.68717949 10.3125,3.53846154 L10.3125,4.23589744 C7.08375,4.93333333 5.25,7.55897436 5.25,10.7179487 L5.25,15.8461538 L3,17.8974359 L3,18.9230769 L21,18.9230769 L21,17.8974359 L18.75,15.8461538 Z" fill="#000000" fill-rule="nonzero"></path>
+            <rect id="24x24" x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

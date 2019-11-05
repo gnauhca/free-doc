@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<button
+  class="ten-button ten-button--size-default ten-button--type-default"
+  type="button"
+>
+  <span>
+    button text
+  </span>
+</button>
+`;
+
+exports[`Button renders loading icon when loading 1`] = `
+<button
+  className="ten-button ten-button--loading ten-button--size-default ten-button--type-default"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <Icon
+    type="loading_gradient"
+  />
+  <span>
+    button text
+  </span>
+</button>
+`;
+
+exports[`Button support old theme api "type" 1`] = `
+<div>
+  <Button
+    autoWidth={false}
+    block={false}
+    disabled={false}
+    loading={false}
+    round={false}
+    size="default"
+    theme="default"
+    type="primary"
+  >
+    <button
+      className="ten-button ten-button--size-default ten-button--type-primary"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <span>
+        主按钮
+      </span>
+    </button>
+  </Button>
+  <Button
+    autoWidth={false}
+    block={false}
+    disabled={false}
+    loading={false}
+    round={false}
+    size="default"
+    theme="default"
+    type="default"
+  >
+    <button
+      className="ten-button ten-button--size-default ten-button--type-default"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <span>
+        次按钮
+      </span>
+    </button>
+  </Button>
+  <Button
+    autoWidth={false}
+    block={false}
+    disabled={false}
+    loading={false}
+    round={false}
+    size="default"
+    theme="default"
+    type="text"
+  >
+    <button
+      className="ten-button ten-button--size-default ten-button--type-text"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <span>
+        文字按钮
+      </span>
+    </button>
+  </Button>
+  <Button
+    autoWidth={false}
+    block={false}
+    disabled={false}
+    loading={false}
+    round={false}
+    size="default"
+    theme="default"
+    type="submit"
+  >
+    <button
+      className="ten-button ten-button--size-default ten-button--type-default"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span>
+        submit
+      </span>
+    </button>
+  </Button>
+</div>
+`;
+
+exports[`Button supports specify icon by string 1`] = `
+<button
+  className="ten-button ten-button--size-default ten-button--type-default"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <Icon
+    type="delete"
+  />
+  <span>
+    button text
+  </span>
+</button>
+`;
+
+exports[`Button supports specify icon by string 2`] = `
+<button
+  className="ten-button ten-button--size-default ten-button--type-default"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span>
+    button text
+  </span>
+  <Icon
+    type="delete"
+  />
+</button>
+`;
