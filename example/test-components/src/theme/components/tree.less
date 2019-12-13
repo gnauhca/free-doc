@@ -1,0 +1,61 @@
+@import "../vars.less";
+
+.ten-tree {
+
+  .ten-tree-node {
+    &__content {
+      display: flex;
+      position: relative;
+      align-items: center;
+      line-height: 40px;
+      padding-left: 28px;
+      cursor: pointer;
+      &:hover, &--selected:not([class*='showcheckbox']):not([class*='parentselected']) {
+        background-color: @primary-color-ligher-7;
+      }
+    }
+
+    &__expand {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      i {
+        position: relative;
+        top: 5px;
+        left: 5px;
+        display: block;
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+        color: @text-color-lighter-2;
+      }
+
+      .ten-icon--carret_right {
+        transition: transform 0.2s;
+      }
+      &--expanded .ten-icon--carret_right {
+        transform: rotate(90deg);
+      }
+      &--children {
+        cursor: pointer;
+      }
+    }
+    
+    &__checkbox {
+      margin-right: 8px;
+    }
+
+    &__children {
+      padding-left: 24px + 6px;
+    }
+  }
+}
+
+.ten-treeselect {
+  background: #fff;
+  max-height: 400px;
+  overflow-y: auto;
+}

@@ -1,0 +1,44 @@
+@import "../vars.less";
+
+.demo-menu {
+  &-bg {
+    background-color: #eee;
+    outline: @border-main;
+
+    &--horizontal {
+      display: flex;
+    }
+  }
+  .vertical() {
+    display: flex;
+    align-items: center;
+  }
+  &__header {
+    .vertical;
+    // min-width: 256px;
+    height: 72px;
+    padding: 0 25px;
+    border-bottom: #F0F0F0 1px dashed;
+    margin-bottom: 24px;
+    &--inline {
+      min-width: 100%;
+      justify-content: center;
+      .ten-icon {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .ten-menu--vertical {
+    min-height: 600px;
+    height: 500px;
+  }
+
+  &-horizontalheader {
+    padding: 0 20px;
+    border-right: #F0F0F0 1px dashed;
+  }
+  &-right {
+    flex: 1;
+  }
+}

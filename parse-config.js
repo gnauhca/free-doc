@@ -15,7 +15,6 @@ function parseComponents(components = [], relativePath = '') {
 
     if (component.component) {
       let componentVal = component.component;
-
       componentVal = utils.resolvePath(componentVal, relativePath);
 
       if (typeof component.async !== 'undefined' && !component.async) {

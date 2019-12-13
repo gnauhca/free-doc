@@ -3,7 +3,8 @@ const fs = require('fs');
 const lodash = require('lodash');
 const express = require('express');
 const webpack = require('webpack');
-const middleware = require('webpack-dev-middleware');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
 const utils = require('./utils');
 const parseConfig = require('./parse-config');
 const getWebpackConfig = require('./script/get-webpack-config');
@@ -24,17 +25,21 @@ function init(docConfigPath) {
 }
 
 function serve() {
+  process.env.NODE_ENV = 'development';
+
   const webpackConfig = getWebpackConfig(docConfig);
   const compiler = webpack(webpackConfig);
   const app = express();
+  const port = docConfig.server ? (docConfig.server.port || 18888) : 18888
 
   app.use(
-    middleware(compiler, {
+    webpackDevMiddleware(compiler, {
       // webpack-dev-middleware options
     })
   );
+  app.use(webpackHotMiddleware(compiler));
 
-  app.listen(18888, () => console.log('Example app listening on port 18888, visit http://127.0.0.1:18888!'));
+  app.listen(port, () => console.log(`Example app listening on port ${port}, visit http://127.0.0.1:${port}`));
 }
 
 function build() {

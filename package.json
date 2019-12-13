@@ -1,6 +1,6 @@
 {
   "name": "free-doc",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "free-doc",
   "main": "index.js",
   "bin": {
@@ -12,8 +12,6 @@
   "author": "gnauhca",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
@@ -64,7 +62,9 @@
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "raw-loader": "^3.0.0",
+    "react": "^16.8.4",
     "react-docgen": "^4.1.1",
+    "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.1",
     "react-styleguidist": "^9.0.5",
     "react-test-renderer": "^16.8.6",
@@ -76,7 +76,7 @@
     "webpack-cli": "^3.3.2",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.3.1",
-    "webpack-hot-middleware": "^2.24.3",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.1",
     "webpackbar": "^3.2.0"
   }

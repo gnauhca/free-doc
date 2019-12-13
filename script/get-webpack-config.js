@@ -32,7 +32,13 @@ module.exports = function getWebpackConfig(docConfig) {
     );
   }
 
-  const config = {
+  if (process.env.NODE_ENV === 'development') {
+    plugins.push(
+      new webpack.HotModuleReplacementPlugin()
+    );
+  }
+
+  let config = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     devtool: process.env.NODE_ENV === 'production' ? false : 'inline-source-map',
     entry: {
@@ -81,11 +87,11 @@ module.exports = function getWebpackConfig(docConfig) {
       ].concat(cssLoaders)
     },
     resolve: {
-      modules: ['node_modules', path.join(__dirname, '../node_modules')],
+      modules: [path.join(__dirname, '../node_modules'), 'node_modules'],
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.json', '.less'],
       alias: {
         '~': utils.resolveRoot('./'),
-        '~docs': utils.resolveRoot('./site/page/docs.jsx'),
+        '~docs': utils.resolveRoot('./site/pages/docs.jsx'),
         '~doc-config': utils.resolveRoot('./site/doc-config.js'),
         '~setup': docConfig.setup || utils.resolveRoot('./site/setup.js'),
         '@': process.cwd(),
@@ -101,8 +107,29 @@ module.exports = function getWebpackConfig(docConfig) {
   };
 
   if (docConfig.customWebpackConfig) {
-    return docConfig.customWebpackConfig(config);
-  } else {
-    return config;
+    config = docConfig.customWebpackConfig(config);
   }
+
+  // add reload
+  function addEntryHotMiddleWare(_entry) {
+    let entry = _entry;
+    if (typeof entry === 'string') {
+      entry = [entry];
+    }
+    entry.unshift('webpack-hot-middleware/client?reload=true&timeout=1000');
+    return entry;
+  }
+  if (process.env.NODE_ENV === 'development') {
+    if (typeof config.entry === 'string') {
+      config.entry = addEntryHotMiddleWare(config.entry);
+    } else if (Array.isArray(config.entry)) {
+      config.entry = addEntryHotMiddleWare(config.entry);
+    } else if (typeof config === 'object') {
+      for (let key in config.entry) {
+        config.entry[key] = addEntryHotMiddleWare(config.entry[key]);
+      }
+    }
+  }
+  // console.log(config); process.exit();
+  return config;
 };

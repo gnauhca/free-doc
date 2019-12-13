@@ -1,0 +1,38 @@
+@import "../vars.less";
+
+.ten-tag {
+  position: relative;
+  display: inline-block;
+  font-size: @font-size-base;
+  line-height: @tag-line-height;
+  background: @tag-bg-color;
+  padding: 2px 9px;
+  min-width: 70px;
+  text-align: center;
+  color: @text-color;
+  border-radius: @tag-border-radius-default;
+  &+& {
+    margin-left: 8px;
+  }
+
+  &--closable {
+    padding-right: 9px + 16px + 4px;
+  }
+  &__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    color: @icon-color;
+    cursor: pointer;
+  }
+  &:hover {
+    background: @primary-color;
+    color: #fff;
+    .ten-tag {
+      &__close {
+        color: #fff;
+      }
+    }
+  }
+}

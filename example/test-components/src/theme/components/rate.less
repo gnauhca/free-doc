@@ -1,0 +1,70 @@
+@import "../vars.less";
+@import "../mixins/index.less";
+
+.ten-rate {
+  display: inline-block;
+
+  &-title {
+    padding-right: 28px;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &-item {
+    position: relative;
+    display: inline-block;
+    transform: scale(1.2);
+    line-height: 1.2;
+    &:not(:last-of-type) {
+      padding-right: 12px;
+    }
+  }
+
+  &-icon {
+    // .transition;
+    color: #fff;
+    display: inline-block;
+    background: @background-color-disabled;
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(1.2);
+
+    &.active,
+    &.unhappy {
+      &.halfWidth{
+        width: 50%;
+      }
+    }
+    &.active {
+      background: @background-color-active;
+    }
+
+    &.unhappy {
+      background: @background-color-active;
+    }
+    &:last-of-type:not(:first-of-type) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      background: @background-color-disabled;
+      z-index: -1;
+      // .transition;
+    }
+  }
+
+  &-info {
+    padding-left: 11px;
+
+    &:empty {
+      display: none;
+    }
+
+    &.unhappy {
+      color: @error-color;
+    }
+  }
+  
+}

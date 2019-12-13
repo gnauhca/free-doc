@@ -31,7 +31,9 @@ class Layout extends React.Component {
       <div className={className}>
         {header && <SpfxHeader />}
         <div className="spfx-body">
-          {children}
+          <div className="spfx-container">
+            {children}
+          </div>
         </div>
         {footer && <SpfxFooter />}
       </div>

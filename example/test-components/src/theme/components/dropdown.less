@@ -1,0 +1,39 @@
+@import "../vars.less";
+
+.ten-dropdown {
+  box-shadow: @shadow-level-2;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+
+  &.ten-popup {
+    padding: 0;
+  }
+
+  &__content {
+    &-item {
+      padding: 0 10px;
+      line-height: 48px;
+      cursor: pointer;
+      outline: none;
+
+      &--selected {
+        color: @primary-color;
+      }
+
+      &--divided {
+        border-top: @border-main-2;
+      }
+
+      &--disabled {
+        color: @disabled-color;
+        cursor: not-allowed;
+      }
+
+      &:hover:not(&--disabled), &:focus:not(&--disabled) {
+        background: @primary-color-ligher-7;
+      }
+    }
+  }
+
+}

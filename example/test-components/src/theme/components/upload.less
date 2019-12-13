@@ -1,0 +1,104 @@
+@import "../vars.less";
+
+.ten-upload {
+  display: inline-block;
+  width: 100%;
+  &__input {
+    display: none;
+  }
+
+  &--drag {
+    .ten-upload__select-container {
+      background: rgba(0, 0, 0, 0.02);
+      border: 1px dashed rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__select-container {
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: @primary-color !important;
+    }
+
+    .ten-icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+.ten-file-list {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 4px;
+}
+
+.ten-file-item {
+  
+  &__info {
+    width: 100%;
+    min-width: 120px;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      .ten-file-item__info-close-icon {
+        opacity: 1;
+      }
+      .ten-file-item__info-status-icon {
+        opacity: 0;
+      }
+    }
+
+    &-status-icon {
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      right: 7px;
+      transform: translate(0, -50%);
+
+      &--loading {
+        color: #0052D9;
+        margin-top: -8px;
+      }
+
+      &--error {
+        color: @error-color !important;
+      }
+
+      &--done {
+        color: @success-color;
+      }
+    }
+
+    &-filename {
+      width: 100%;
+      font-size: 14px;
+      padding: 0 30px 0 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      box-sizing: border-box;
+    }
+
+    &-close-icon {
+      position: absolute;
+      font-size: 16px;
+      opacity: 0;
+      right: 7px;
+      top: 50%;
+      transform: translate(0, -50%);
+      color: @disabled-color;
+    }
+  }
+
+  & + & {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,16 @@
+@import "../vars.less";
+
+.demo-row {
+  .ten-row + .ten-row {
+    margin-top: 10px;
+  }
+  .ten-col {
+    &:after {
+      display: block;
+      content: '';
+      height: 36px;
+      margin: 10px 0;
+      background: @primary-color-ligher-7;
+    }
+  }
+}

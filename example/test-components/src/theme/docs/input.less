@@ -1,0 +1,41 @@
+.demo-input, .demo-input-group {
+  .demo-input-base {
+    width: 497px;
+
+    .ten-input + .ten-input {
+      margin-top: 10px;
+    }
+  }
+
+  .demo-input-number {
+    .ten-input {
+      width: 88px;
+      & + .ten-input {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .demo-input-group {
+    width: 497px;
+    & + .demo-input-group {
+      margin-top: 10px;
+    }
+  }
+}
+
+.input-base {
+  .ten-input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.demo-input-number {
+  .ten-input {
+    width: 88px;
+    & + .ten-input {
+      margin-left: 10px;
+    }
+  }
+}

@@ -16,7 +16,7 @@ const propColumns = [
     key: 'type',
     render(props) {
       const type = props.row.type;
-
+      console.log(props.row);
       return type === 'func' ? 
       (
         <div className="spfx-doc-table-params">
@@ -25,7 +25,7 @@ const propColumns = [
             props.row.param.map((param, i) => (
               <div key={i} className="spfx-doc-table-params__item">
                 <span>@param {param.name}</span>
-                {param.type && <span className="spfx-doc-table-params__item-type">{param.type}</span>}
+                {param.type && <span className="spfx-doc-table-params__item-type">{param.type.name}</span>}
                 <span> - {param.description}</span>
               </div>
             ))

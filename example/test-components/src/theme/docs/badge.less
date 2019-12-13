@@ -1,0 +1,39 @@
+@import "../vars.less";
+.demo-badge {
+  .ten-badge{
+    margin-right: 30px;
+    .ten-icon{
+      font-size: 20px;
+      display: inline-block;
+      color: @primary-color;
+    }
+    &:nth-child(2) .ten-icon{
+      color: #fff;
+      background: @primary-color;
+    }
+  }
+  .badgebox{
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
+  }
+}
+.badge_box{
+  display: flex;
+  align-items: center;
+  .ten-badge{
+    margin-bottom: 30px;
+    margin-right: 20px;
+    .ten-icon{
+        font-size: 20px;
+        display: inline-block;
+        color: @primary-color;
+    }
+    &:nth-child(2) .ten-icon{
+      color: #fff;
+      background: @primary-color;
+    }
+  }
+}

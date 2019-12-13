@@ -1,0 +1,53 @@
+@import "../vars.less";
+
+.ten-message {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  margin-left: calc(50vw);
+  padding: @message-padding;
+  min-width: 340px;
+  max-width: 500px;
+  color: @text-color;
+  box-shadow: @shadow-level-1;
+  transform: translate(-50%, 0);
+  border-radius: @message-border-radius-default;
+  background: #fff;
+
+  &:first-child {
+    // margin-top: 50px;
+  }
+
+  &--dark {
+    background: #5d5d5d;
+    color: #fff;
+  }
+
+  &--success {
+    .ten-message__icon {
+      color: @success-color;
+    }
+  }
+
+  &--error {
+    .ten-message__icon {
+      color: @error-color;
+    }
+  }
+
+  &--info {
+    .ten-message__icon {
+      color: #102C53;
+    }
+  }
+
+  &--warning {
+    .ten-message__icon {
+      color: @warning-color;
+    }
+  }
+
+  &__icon {
+    margin-right: 6px;
+  }
+}

@@ -9,6 +9,9 @@ import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx.js';
 import 'prismjs/themes/prism.css';
 
+import '~/site/styles/index.less';
+import '~/site/styles/pages/doc.less';
+
 class Doc extends React.Component {
   static propTypes = {
     getRef: PropTypes.func,
@@ -112,24 +115,22 @@ class Doc extends React.Component {
     const { navData } = this.props;
     const { docContentTop, docContentBottom } = this.state;
     return (
-      <div className="spfx-container spfx-container--fullpage spfx-doc-container">
-        <div className="spfx-doc" ref={this.refDocContent}>
-          {docContentTop > 0 && (
-            <FixedSide
-              ref={this.refFixedSide}
-              top={docContentTop}
-              bottom={docContentBottom}
-            >
-              <SideNav
-                data={navData}
-                renderItem={this.renderComponentLink}
-                onNavClick={this.onNavClick}
-              />
-            </FixedSide>
-          )}
+      <div className="spfx-doc spfx-page-doc" ref={this.refDocContent}>
+        {docContentTop >= 0 && (
+          <FixedSide
+            ref={this.refFixedSide}
+            top={docContentTop}
+            bottom={docContentBottom}
+          >
+            <SideNav
+              data={navData}
+              renderItem={this.renderComponentLink}
+              onNavClick={this.onNavClick}
+            />
+          </FixedSide>
+        )}
 
-          <div className="spfx-doc-content">{this.routeArr}</div>
-        </div>
+        <div className="spfx-doc-content">{this.routeArr}</div>
       </div>
     );
   }

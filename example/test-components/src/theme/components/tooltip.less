@@ -1,0 +1,204 @@
+@import "../vars.less";
+@import "../mixins/index.less";
+
+.ten-tooltip {
+  padding: 16px;
+  background: none;
+  box-shadow: none;
+
+  &.ten-popup {
+    overflow: visible;
+  }
+
+  &-content {
+    position: relative;
+    z-index: 1;
+    padding: 16px;
+    color: @text-color-lighter-1;
+    background: #fff;
+    box-shadow: @shadow-level-2;
+    // border: @tooltip-border;
+    border-radius: @tooltip-border-radius-default;
+  }
+
+  &__extra {
+    margin-top: 20px;
+    text-align: right;
+    a {
+      .ten-primary-link();
+    }
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: @tooltip-arrow-zindex;
+    border-color: #fff;
+    border-top: @tooltip-arrow-border;
+    border-right: @tooltip-arrow-border;
+    // box-shadow: @tooltip-arrow-shadow;
+    width: 16px;
+    height: 16px;
+    // transform: rotate(45deg);
+    background-color: #fff;
+    // border: none!important;
+  }
+
+  // arrow
+  &[class*="--p-top-"]:after {
+    bottom: 8px;
+  }
+
+  &[class*="--p-bottom-"]:after {
+    top: 8px;
+  }
+
+  &[class*="--p-left-"]:after {
+    right: 8px;
+  }
+
+  &[class*="--p-right-"]:after {
+    left: 8px;
+  }
+
+  &[class*="--p-top-left"]:after {
+    left: 32px;
+    transform: rotate(135deg);
+  }
+
+  &[class*="--p-top-center"]:after {
+    left: 50%;
+    transform: translateX(-50%) rotate(135deg);
+  }
+
+  &[class*="--p-top-right"]:after {
+    right: 32px;
+    transform: translateX(-50%) rotate(135deg);
+  }
+
+  &[class*="--p-left-top"]:after {
+    top: 32px;
+    transform: rotate(45deg);
+  }
+
+  &[class*="--p-left-center"]:after {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &[class*="--p-left-bottom"]:after {
+    bottom: 32px;
+    transform: rotate(45deg);
+  }
+
+  &[class*="--p-right-top"]:after {
+    top: 32px;
+    transform: rotate(-135deg);
+  }
+
+  &[class*="--p-right-center"]:after {
+    top: 50%;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+
+  &[class*="--p-right-bottom"]:after {
+    bottom: 32px;
+    transform: rotate(-135deg);
+  }
+
+  &[class*="--p-bottom-left"]:after {
+    left: 32px;
+    transform: rotate(-45deg);
+  }
+
+  &[class*="--p-bottom-center"]:after {
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  &[class*="--p-bottom-right"]:after {
+    right: 32px;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  // &[class*="--p-bottom-center"]:after {
+  //   left: 50%;
+  //   transform: translateX(-50%) rotate(-45deg);
+  // }
+
+  // &[class*="--p-bottom-left"]:after {
+  //   left: 32px;
+  //   transform: rotate(-45deg);
+  // }
+
+  // &[class*="--p-top-right"]:after,
+  // &[class*="--p-bottom-right"]:after {
+  //   right: 32px;
+  // }
+
+  // // horizontal
+  // &[class*="--p-left-"]:after {
+  //   right: 9px;
+  //   // border-left: 8px solid #fff;
+  //   // border-top: 8px solid transparent;
+  //   // border-bottom: 8px solid transparent;
+  // }
+
+  // &[class*="--p-right-"]:after {
+  //   left: 8px;
+  //   // border-right: 8px solid #fff;
+  //   // border-top: 8px solid transparent;
+  //   // border-bottom: 8px solid transparent;
+  // }
+
+  // &[class*="--p-left-center"]:after,
+  // &[class*="--p-right-center"]:after {
+  //   top: 50%;
+  //   transform: translateY(-50%) rotate(45deg);
+  // }
+
+  // &[class*="--p-left-top"]:after,
+  // &[class*="--p-right-top"]:after {
+  //   top: 32px;
+  //   transform: translateY(-50%) rotate(45deg);
+  // }
+
+  // &[class*="--p-left-bottom"]:after,
+  // &[class*="--p-right-bottom"]:after {
+  //   bottom: 32px;
+  //   transform: translateY(-50%) rotate(45deg);
+  // }
+
+  &--dark {
+    .ten-tooltip {
+      &-content {
+        border: none;
+        background: #5d5d5d;
+        color: #fff;
+      }
+      &__extra {
+        a {
+          color: #fff;
+        }
+      }
+    }
+    &:after {
+      z-index: 1;
+      border-color: none;
+      background-color: #5d5d5d;
+    }
+    // &[class*="--p-top-"]:after {
+    //   // border-top: 8px solid #5d5d5d;
+    // }
+    // &[class*="--p-bottom-"]:after {
+    //   // border-bottom: 8px solid #5d5d5d;
+    // }
+    // &[class*="--p-left-"]:after {
+    //   // border-left: 8px solid #5d5d5d;
+    // }
+    // &[class*="--p-right-"]:after {
+    //   // border-right: 8px solid #5d5d5d;
+    // }
+  }  
+}

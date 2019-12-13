@@ -1,0 +1,75 @@
+@import "../vars.less";
+@import "../transition.less";
+
+.ten-popup {
+  position: absolute;
+  z-index: 10001;
+  box-shadow: @shadow-level-2;
+  background: #fff;
+  padding: 16px;
+  overflow: hidden;
+  border-radius: @popup-border-radius-default;
+}
+
+@popup-flow: ten-flow-in__popup;
+
+.@{popup-flow}-enter,
+.@{popup-flow}-exiting,
+.@{popup-flow}-leave-to {
+  opacity: 0;
+}
+
+.@{popup-flow}-enter-to,
+.@{popup-flow}-entering,
+.@{popup-flow}-leave {
+  opacity: 1;
+  transform: none;
+}
+
+.@{popup-flow}-enter-active {
+  transition: @flowin-transition;
+}
+.@{popup-flow}-leave-active {
+  transition: @flowin-transition;
+}
+
+[class*="ten-popup--p"] {
+  &.@{popup-flow}-entering,
+  &.@{popup-flow}-exit,
+  &.@{popup-flow}-exiting {
+    transition: @flowin-transition;
+  }
+}
+
+
+// top
+.@{popup-flow}-enter[class*="ten-popup--p-top-"],
+.@{popup-flow}-exiting[class*="ten-popup--p-top-"],
+.@{popup-flow}-leave-to[class*="ten-popup--p-top-"] {
+  transform: translateY(@transfrom-y);
+  opacity: 0;
+}
+
+// left
+.@{popup-flow}-enter[class*="ten-popup--p-left-"],
+.@{popup-flow}-exiting[class*="ten-popup--p-left-"],
+.@{popup-flow}-leave-to[class*="ten-popup--p-left-"] {
+  transform: translateX(@transform-x);
+  opacity: 0;
+}
+
+// right
+.@{popup-flow}-enter[class*="ten-popup--p-right-"],
+.@{popup-flow}-exiting[class*="ten-popup--p-right-"],
+.@{popup-flow}-leave-to[class*="ten-popup--p-right-"] {
+  transform: translateX(-@transform-x);
+  opacity: 0;
+}
+
+// bottom
+.@{popup-flow}-enter[class*="ten-popup--p-bottom-"],
+.@{popup-flow}-exiting[class*="ten-popup--p-bottom-"],
+.@{popup-flow}-leave-to[class*="ten-popup--p-bottom-"] {
+  transform: translateY(-@transfrom-y);
+  opacity: 0;
+}

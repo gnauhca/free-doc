@@ -1,0 +1,60 @@
+@import "../vars.less";
+.ten-badge{
+  display: inline-block;
+  position: relative;
+  .ten-badge__number {
+    border-radius: @badge-border-radius-default;
+  }
+}
+.ten-badge__count{
+  .ten-badge__number{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-50%);
+    width: 6px;
+    height: 6px;
+    background: @error-color;
+    border-radius: 100%;
+    color: #fff;
+  }
+}
+.ten-badge--circle{
+  display: flex;
+  align-items: center;
+  .ten-badge__number{
+    padding: 1px 5px;
+    line-height: 14px;
+    font-size: @smalltext-level-1-size;
+    height: 16px;
+    margin-left: 16px;
+    user-select:none;
+    color: #fff;
+  }
+}
+.ten-badge--error{
+  .ten-badge__number{
+    background: @error-color;
+  }
+}
+.ten-badge--info{
+  .ten-badge__number{
+    background: #D0E3F5;
+    color: @primary-color;
+  }
+}
+.ten-badge--success{
+  .ten-badge__number{
+    background: @success-color;
+  }
+}
+.ten-badge--warn{
+  .ten-badge__number{
+    background: @warning-color;
+  }
+}
+.ten-badge--disabled{
+  .ten-badge__number{
+    background: @disabled-color;
+  }
+}

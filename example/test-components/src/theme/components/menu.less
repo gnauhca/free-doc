@@ -1,0 +1,305 @@
+@import "../vars.less";
+@import "../mixins/index.less";
+
+@item: ten-menu-item;
+@content: ten-menu-item__content;
+@contentinner: ten-menu-item__contentinner;
+@contenticon: ten-menu-item__content-icon;
+@contentcarret: ten-menu-item__content-carret;
+@submenu: ten-menu-item__submenu;
+
+// 垂直模式折叠时，第一级选中与 hover 样式
+.deep-0-collapse-selected() {
+  color: @menu-item-deep-0-color-active-collapsed;
+  background: @menu-item-deep-0-bg-active-collapsed;
+  .@{contenticon} {
+    color: @menu-item-deep-0-color-active-collapsed;
+  }
+}
+
+.hover() {
+  &:hover {
+    color: @menu-item-color-hover;
+    background: @menu-item-bg-hover;
+  }
+}
+
+.flex-center() {
+  display: flex;
+  align-items: center;
+}
+
+
+.ten-menu {
+  position: relative;
+  font-size: @font-size-base;
+  background-color: #fff;
+  &-nav {
+    .clearfix();
+  }
+
+}
+
+// 菜单项
+.ten-menu-item {
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+  float: left;
+
+  &__content {
+    .flex-center();
+    position: relative;
+    transition: background-color .2s;
+    padding: (@menu-item-deep-0-height-vertical - @menu-item-content-height-vertical) / 2 0;
+
+    .@{contentinner} {
+      width: 100%;
+      padding: @menu-item-content-padding-vertical;
+      line-height: @menu-item-content-height-vertical;
+      height: @menu-item-content-height-vertical;
+      color: @text-color-lighter-1;
+      .hover;
+      &:hover .@{contenticon} {
+        color: @menu-item-color-hover;
+      }
+    }
+
+    &-icon {
+      font-size: 20px;
+      color: @icon-color;
+      .ten-icon {
+        margin-left: 2px;
+        margin-right: 14px;
+        vertical-align: middle;
+      }
+    }
+
+    &-carret {
+      display: block;
+      position: absolute;
+      right: @menu-submenu-carret-right-vertical;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform .2s;
+      color: @icon-color;
+    }
+
+    &--expanded &-carret {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &.@{content}--selected .@{contentinner} {
+      background: @menu-item-bg-active;
+      color: @menu-item-color-active;
+      .@{contenticon} {
+        color: @menu-item-color-active;
+      }
+    }
+
+  }
+
+
+  &--paddingdeep {
+
+    &-1 {
+      .@{contentinner} {
+        padding-left: 52px;
+      }
+    }
+
+    &-2 .@{contentinner} {
+      padding-left: 72px;
+    }
+
+    &-3 .@{contentinner} {
+      padding-left: 92px;
+    }
+  }
+}
+
+// vertical
+.ten-menu--vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  width: @menu-width-vertical;
+
+  &--collapsable {
+    padding-bottom: 48px;
+    transition: width .2s;
+  }
+
+  .ten-menu-header {
+    flex: none;
+  }
+
+  .ten-menu-nav {
+    flex: 1;
+    padding: @menu-padding-vertical;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .@{content} .@{content}-content,
+  .@{content}-carret {
+    transition: opacity .2s;
+  }
+  
+  .@{content}--childrenselected .@{contentinner} {
+    .deep-0-collapse-selected();
+  }
+
+
+  // 垂直模式-折叠
+  &--collapsed {
+    width: @menu-collapsed-width-vertical;
+    overflow: hidden;
+
+    .ten-menu-nav {
+      padding: 0;
+      overflow: visible;
+    }
+
+    .@{item}--deep-0 {
+      z-index: 1;
+
+      &.@{item}--hoverexpanded {
+        z-index: 2;
+        box-shadow: @shadow-level-1;
+      }
+
+      >.@{content} {
+        padding: (@menu-item-deep-0-height-vertical - @menu-item-content-height-vertical) / 2 16px;
+        background: #fff;
+        z-index: 1;
+
+        &--childrenselected .@{contentinner},
+        &--selected .@{contentinner} {
+          .deep-0-collapse-selected();
+        }
+      }
+
+      >.@{content} .@{content}-content,
+      >.@{content} .@{content}-carret {
+        opacity: 0;
+      }
+
+      >.@{submenu} {
+        // display: block !important;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: @menu-collapsed-width-vertical;
+        width: @menu-collapsed-submenu-width-vertical;
+        padding: 3px 16px;
+        background: #fff;
+        box-shadow: @shadow-level-1;
+      }
+    }
+
+  }
+
+  &--aftercollapsed {
+    overflow: visible;
+
+    .@{item}--deep-0>.@{content} .@{content}-content,
+    .@{item}--deep-0>.@{content} .@{content}-carret {
+      display: none;
+    }
+  }
+}
+
+// footer {
+.ten-menu__footer {
+  flex: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+  border-top: #F0F0F0 1px dashed;
+  background: #fff;
+  // position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &-carret {
+    display: block;
+    font-size: 16px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    transition: all .4s ease-in-out;
+    color: @icon-color;
+  }
+
+  &--collapsed {
+    width: 100%;
+
+    .ten-menu__footer-carret {
+      right: 36px;
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+// horizontal
+.ten-menu--horizontal {
+  .ten-menu-header {
+    float: left;
+    height: @menu-item-height-horizontal;
+    line-height: @menu-item-height-horizontal - 2px;
+    width: auto;
+  }
+
+  .@{item} {
+    &--deep-0 {
+      float: left;
+      margin: 0;
+      width: auto;
+
+      >.@{content} {
+        padding: 0;
+      }
+
+      >.@{content} .@{contentinner} {
+        padding: 0 24px;
+        line-height: @menu-item-height-horizontal;
+        height: @menu-item-height-horizontal;
+        border-bottom: 2px solid transparent;
+      }
+
+      >.@{content} .@{content}-carret {
+        right: @menu-submenu-carret-right-horizontal;
+      }
+
+      &.@{item}--ismenu>.@{content} .@{contentinner} {
+        padding-right: 50px;
+      }
+
+      >.@{content} {
+
+        &--childrenselected .@{contentinner},
+        &--selected>.@{contentinner} {
+          .deep-0-collapse-selected();
+          border-bottom: 2px solid @primary-color;
+        }
+      }
+
+      >.@{submenu} {
+        // display: block !important;
+        position: absolute;
+        z-index: 0;
+        top: 100%;
+        left: 0;
+        width: @menu-collapsed-submenu-width-vertical;
+        padding: 3px 16px;
+        background: #fff;
+        box-shadow: @shadow-level-1;
+      }
+    }
+  }
+}

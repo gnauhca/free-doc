@@ -1,0 +1,128 @@
+@import "../vars.less";
+
+.ten-form {
+
+  &-item {
+    display: flex;
+    margin-bottom: 22px;
+    position: relative;
+
+    &-label {
+      width: 6em;
+      margin-right: 16px;
+      line-height: 40px;
+      color: @text-color;
+      font-size: 14px;
+    }
+
+    &-control {
+      flex: 1;
+      position: relative;
+      line-height: 40px;
+    }
+
+    &-err {
+      display: none;
+      position: absolute;
+      top: 100%;
+      font-size: 12px;
+      line-height: 20px;
+      color: #FF3E00;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 8px;
+      right: -28px;
+      font-size: 16px;
+    }
+
+    .ten-form-item-icon {
+      display: none;
+    }
+
+    .ten-form-item-icon .ten-icon {
+
+      &--line_circle_help {
+        color: #FFA700;
+        cursor: pointer;
+      }
+
+      &--circle_clear {
+        color: #ff3e00;
+      }
+
+      &--circle_tick {
+        color: #3ecc36;
+      }
+
+      &--circle_error {
+        color: #FFA700;
+      }
+
+      &--loading_gradient {
+        color: @primary-color;
+      }
+    }
+
+    &--required {
+      .ten-form-item-label {
+        &:before {
+          content: '*';
+          display: inline;
+          color: @error-color;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &--error {
+      // margin-bottom: 4px;
+
+      .ten-form-item-err {
+        display: block;
+      }
+
+      .ten-input__input {
+        border-color: #FF3E00;
+
+        input {
+          // color: #ff3e00;
+        }
+      }
+    }
+
+    &--warning {
+      .ten-input__input {
+        border-color: #FFA700;
+      }
+    }
+
+    &--icon {
+      .ten-form-item-icon {
+        display: inline-block;
+      }
+    }
+  }
+
+  &--inline {
+    .ten-form-item {
+      display: inline-flex;
+
+      &-label {
+        width: auto;
+      }
+    }
+
+    .ten-form-item+.ten-form-item {
+      margin-left: 8px;
+    }
+  }
+  &--labelalign-right {
+    .ten-form-item {
+      &-label {
+        text-align: right;
+      }
+    }
+  }
+}
